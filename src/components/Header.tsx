@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Menu, X, TrendingUp } from 'lucide-react'
 
-export function Header() {
+interface HeaderProps {
+  onNavigate: (page: string) => void
+}
+
+export function Header({ onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
@@ -10,7 +14,6 @@ export function Header() {
     { name: 'Services', href: '#services' },
     { name: 'Performance', href: '#performance' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Investor Portal', href: '/portal' },
   ]
 
   return (
@@ -30,15 +33,17 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${
-                  item.name === 'Investor Portal' 
-                    ? 'bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg' 
-                    : 'text-gray-700 hover:text-navy-600'
-                }`}
+                className="text-gray-700 hover:text-navy-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>
             ))}
+            <button
+              onClick={() => onNavigate('portal')}
+              className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+            >
+              Investor Portal
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -60,16 +65,21 @@ export function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 font-medium ${
-                    item.name === 'Investor Portal'
-                      ? 'text-navy-600 bg-navy-50 rounded-lg'
-                      : 'text-gray-700 hover:text-navy-600'
-                  }`}
+                  className="block px-3 py-2 font-medium text-gray-700 hover:text-navy-600"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  onNavigate('portal')
+                  setIsMenuOpen(false)
+                }}
+                className="block w-full text-left px-3 py-2 text-navy-600 bg-navy-50 rounded-lg font-medium"
+              >
+                Investor Portal
+              </button>
             </div>
           </div>
         )}

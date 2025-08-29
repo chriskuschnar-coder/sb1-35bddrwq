@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { 
   TrendingUp, 
@@ -13,26 +11,24 @@ import {
   Zap
 } from 'lucide-react'
 
-export function InvestorDashboard() {
+interface InvestorDashboardProps {
+  onLogout: () => void
+}
+
+export function InvestorDashboard({ onLogout }: InvestorDashboardProps) {
   const [selectedTab, setSelectedTab] = useState('overview')
 
   const portfolioData = {
-    totalValue: 12500000,
+    totalValue: 2700000,
     monthlyReturn: 18.7,
     yearlyReturn: 287,
     sharpeRatio: 2.84
   }
 
   const holdings = [
-    { name: 'Nautilus Flagship Fund', allocation: 70, value: 8750000, return: 18.7 },
-    { name: 'Conservative Income Strategy', allocation: 20, value: 2500000, return: 15.2 },
-    { name: 'Aggressive Growth Portfolio', allocation: 10, value: 1250000, return: 62.4 }
-  ]
-
-  const recentTransactions = [
-    { date: '2025-01-15', type: 'Performance Distribution', amount: 234000, fund: 'Nautilus Flagship Fund' },
-    { date: '2025-01-10', type: 'Capital Contribution', amount: 2500000, fund: 'Conservative Income Strategy' },
-    { date: '2025-01-05', type: 'Monthly Performance', amount: 187500, fund: 'Aggressive Growth Portfolio' }
+    { name: 'Helios Alpha Fund', allocation: 70, value: 1890000, return: 18.7 },
+    { name: 'Market Neutral Strategy', allocation: 20, value: 540000, return: 15.2 },
+    { name: 'Quantitative Momentum Portfolio', allocation: 10, value: 270000, return: 62.4 }
   ]
 
   const tabs = [
@@ -43,27 +39,22 @@ export function InvestorDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <TrendingUp className="h-8 w-8 text-navy-600" />
               <span className="font-serif text-xl font-bold text-navy-900">
-                Nautilus Investor Portal
+                Helios Investor Portal
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  Institutional Investor
-                </div>
-                <div className="text-xs text-gray-600">
-                  investor@nautilus.com
-                </div>
+                <div className="text-sm font-medium text-gray-900">Institutional Investor</div>
+                <div className="text-xs text-gray-600">investor@heliosquant.com</div>
               </div>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={onLogout}
                 className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-navy-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 <LogOut className="h-5 w-5" />
@@ -75,7 +66,6 @@ export function InvestorDashboard() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Portfolio Summary */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-2">
@@ -85,7 +75,7 @@ export function InvestorDashboard() {
             <div className="font-serif text-2xl font-bold text-navy-900">
               ${portfolioData.totalValue.toLocaleString()}
             </div>
-            <div className="text-xs text-gray-500 mt-1">Across all Nautilus strategies</div>
+            <div className="text-xs text-gray-500 mt-1">Across all Helios strategies</div>
           </div>
           
           <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
@@ -122,7 +112,6 @@ export function InvestorDashboard() {
           </div>
         </div>
 
-        {/* Navigation Tabs */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
           <div className="border-b border-gray-200">
             <nav className="flex space-x-8 px-6">
@@ -147,7 +136,7 @@ export function InvestorDashboard() {
             {selectedTab === 'overview' && (
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif text-xl font-bold text-navy-900">Nautilus System Performance</h3>
+                  <h3 className="font-serif text-xl font-bold text-navy-900">Helios System Performance</h3>
                   <button 
                     onClick={() => window.open('/helios', '_blank')}
                     className="bg-navy-600 hover:bg-navy-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 inline-flex items-center"
@@ -171,26 +160,6 @@ export function InvestorDashboard() {
                               ${holding.value.toLocaleString()}
                             </div>
                             <div className="text-sm text-green-600">+{holding.return}%</div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-4">Recent Activity</h4>
-                    <div className="space-y-3">
-                      {recentTransactions.map((transaction, index) => (
-                        <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
-                          <div>
-                            <div className="font-medium text-gray-900">{transaction.type}</div>
-                            <div className="text-sm text-gray-600">{transaction.fund}</div>
-                          </div>
-                          <div className="text-right">
-                            <div className="font-medium text-green-600">
-                              +${transaction.amount.toLocaleString()}
-                            </div>
-                            <div className="text-sm text-gray-600">{transaction.date}</div>
                           </div>
                         </div>
                       ))}
@@ -238,11 +207,11 @@ export function InvestorDashboard() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
                     'Monthly Performance Report - January 2025',
-                    'Nautilus System Technology Overview', 
+                    'Helios System Technology Overview', 
                     'Quarterly Investment Letter - Q4 2024',
                     'Risk Management Framework',
                     'Market Microstructure Analysis',
-                    'Smart Money Concepts Implementation',
+                    'VPIN Implementation Research',
                     'Compliance & Regulatory Filings',
                     'Institutional Sales Presentation'
                   ].map((doc, index) => (

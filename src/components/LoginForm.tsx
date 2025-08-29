@@ -1,9 +1,12 @@
-'use client'
-
 import { useState } from 'react'
-import { TrendingUp, Eye, EyeOff, Shield } from 'lucide-react'
+import { TrendingUp, Eye, EyeOff, Shield, ArrowLeft } from 'lucide-react'
 
-export function LoginForm() {
+interface LoginFormProps {
+  onLogin: (email: string, password: string) => boolean
+  onNavigate: (page: string) => void
+}
+
+export function LoginForm({ onLogin, onNavigate }: LoginFormProps) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -15,21 +18,26 @@ export function LoginForm() {
     setIsLoading(true)
     setError('')
 
-    // Simple demo authentication
-    if (email === 'investor@heliosquant.com' && password === 'HeliosDemo2025') {
-      // Simulate loading
-      setTimeout(() => {
-        window.location.href = '/portal/dashboard'
-      }, 1000)
-    } else {
-      setError('Invalid credentials. Please use demo account.')
+    setTimeout(() => {
+      const success = onLogin(email, password)
+      if (!success) {
+        setError('Invalid credentials. Please use demo account.')
+      }
       setIsLoading(false)
-    }
+    }, 1000)
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-navy-50 to-white flex items-center justify-center px-4">
       <div className="max-w-md w-full">
+        <button
+          onClick={() => onNavigate('home')}
+          className="flex items-center space-x-2 text-navy-600 hover:text-navy-700 mb-6 transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span>Back to Website</span>
+        </button>
+
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
@@ -41,7 +49,7 @@ export function LoginForm() {
               Helios Investor Portal
             </h1>
             <p className="text-gray-600">
-              Secure access to your quantitative investment dashboard and live trading system performance
+              Secure access to your quantitative investment dashboard
             </p>
           </div>
 
