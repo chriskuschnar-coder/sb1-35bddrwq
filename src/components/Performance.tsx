@@ -6,10 +6,10 @@ export function Performance() {
   const periods = ['1Y', '3Y', '5Y', '10Y']
   
   const performanceData = {
-    '1Y': { return: '8.2%', benchmark: '5.1%', volatility: '12.3%' },
-    '3Y': { return: '11.7%', benchmark: '7.8%', volatility: '14.1%' },
-    '5Y': { return: '12.4%', benchmark: '8.9%', volatility: '13.8%' },
-    '10Y': { return: '10.9%', benchmark: '7.2%', volatility: '15.2%' }
+    '1Y': { return: '11.8%', benchmark: '5.1%', volatility: '8.9%' },
+    '3Y': { return: '13.2%', benchmark: '7.8%', volatility: '9.4%' },
+    '5Y': { return: '14.7%', benchmark: '8.9%', volatility: '10.1%' },
+    '10Y': { return: '12.9%', benchmark: '7.2%', volatility: '11.3%' }
   }
 
   const currentData = performanceData[selectedPeriod as keyof typeof performanceData]
@@ -19,11 +19,11 @@ export function Performance() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-white mb-4">
-            Performance Track Record
+            Limited Partnership Performance
           </h2>
           <p className="text-xl text-navy-200 max-w-3xl mx-auto">
-            Consistent outperformance across market cycles with disciplined risk management 
-            and institutional-grade investment processes.
+            Delivering consistent absolute returns for Limited Partners through disciplined 
+            multi-strategy approach with institutional-grade risk controls since 2008.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export function Performance() {
               <div className="font-serif text-4xl font-bold text-green-600 mb-2">
                 {currentData.return}
               </div>
-              <div className="text-gray-600 font-medium">Annual Return</div>
+              <div className="text-gray-600 font-medium">Net Annual Return</div>
               <div className="text-sm text-gray-500">Net of fees</div>
             </div>
             <div className="text-center">
@@ -59,7 +59,7 @@ export function Performance() {
                 {currentData.benchmark}
               </div>
               <div className="text-gray-600 font-medium">Benchmark</div>
-              <div className="text-sm text-gray-500">S&P 500 Index</div>
+              <div className="text-sm text-gray-500">HFRI Fund Weighted</div>
             </div>
             <div className="text-center">
               <div className="font-serif text-4xl font-bold text-gold-600 mb-2">
@@ -76,15 +76,15 @@ export function Performance() {
             </h4>
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <div className="text-2xl font-bold text-navy-900 mb-1">1.24</div>
+                <div className="text-2xl font-bold text-navy-900 mb-1">1.67</div>
                 <div className="text-gray-600">Sharpe Ratio</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-navy-900 mb-1">0.89</div>
-                <div className="text-gray-600">Beta</div>
+                <div className="text-2xl font-bold text-navy-900 mb-1">0.23</div>
+                <div className="text-gray-600">Market Beta</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-navy-900 mb-1">-8.2%</div>
+                <div className="text-2xl font-bold text-navy-900 mb-1">-4.1%</div>
                 <div className="text-gray-600">Max Drawdown</div>
               </div>
             </div>

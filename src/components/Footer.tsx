@@ -13,21 +13,21 @@ export function Footer() {
               </span>
             </div>
             <p className="text-navy-200 mb-6 max-w-md">
-              Premier institutional investment management firm delivering exceptional 
-              risk-adjusted returns through disciplined global market strategies.
+              Delaware Limited Partnership delivering consistent, risk-adjusted returns 
+              for Limited Partners through disciplined global market strategies since 2008.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-navy-200">
                 <Phone className="h-4 w-4" />
-                <span>+1 (212) 555-0123</span>
+                <span>+1 (561) 555-0147</span>
               </div>
               <div className="flex items-center space-x-2 text-navy-200">
                 <Mail className="h-4 w-4" />
-                <span>info@globalmarketconsulting.com</span>
+                <span>investors@globalmarketconsulting.com</span>
               </div>
               <div className="flex items-center space-x-2 text-navy-200">
                 <MapPin className="h-4 w-4" />
-                <span>200 Park Avenue, New York, NY 10166</span>
+                <span>515 N Flagler Drive, West Palm Beach, FL 33401</span>
               </div>
             </div>
           </div>
@@ -35,20 +35,20 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-navy-200">
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Equity Strategies</a></li>
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Fixed Income</a></li>
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Alternative Investments</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Long/Short Equity</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Global Macro</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Event Driven</a></li>
               <li><a href="#services" className="hover:text-gold-400 transition-colors">Risk Management</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4">Resources</h3>
+            <h3 className="font-serif text-lg font-bold mb-4">Limited Partners</h3>
             <ul className="space-y-2 text-navy-200">
               <li><a href="/portal" className="hover:text-gold-400 transition-colors">Investor Portal</a></li>
               <li><a href="#performance" className="hover:text-gold-400 transition-colors">Performance</a></li>
-              <li><a href="#about" className="hover:text-gold-400 transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-gold-400 transition-colors">Contact</a></li>
+              <li><a href="#about" className="hover:text-gold-400 transition-colors">Fund Structure</a></li>
+              <li><a href="#contact" className="hover:text-gold-400 transition-colors">Investor Relations</a></li>
             </ul>
           </div>
         </div>
@@ -60,8 +60,9 @@ export function Footer() {
             </div>
             <div className="flex space-x-6 text-sm text-navy-300">
               <a href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gold-400 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-gold-400 transition-colors">LP Agreement</a>
               <a href="#" className="hover:text-gold-400 transition-colors">Risk Disclosures</a>
+              <a href="#" className="hover:text-gold-400 transition-colors">SEC Filings</a>
             </div>
           </div>
         </div>

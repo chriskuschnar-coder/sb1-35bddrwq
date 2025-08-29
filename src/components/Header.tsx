@@ -6,10 +6,10 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
+    { name: 'Fund Structure', href: '#about' },
+    { name: 'Investment Approach', href: '#services' },
     { name: 'Performance', href: '#performance' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Investor Relations', href: '#contact' },
   ]
 
   return (
@@ -35,7 +35,7 @@ export function Header() {
               </a>
             ))}
             <a href="/portal" className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-              Investor Portal
+              Limited Partner Login
             </a>
           </div>
 
@@ -65,7 +65,7 @@ export function Header() {
                 </a>
               ))}
               <a href="/portal" className="block px-3 py-2 text-navy-600 font-medium">
-                Investor Portal
+                Limited Partner Login
               </a>
             </div>
           </div>

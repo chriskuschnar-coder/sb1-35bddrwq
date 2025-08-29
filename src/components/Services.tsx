@@ -4,27 +4,27 @@ export function Services() {
   const services = [
     {
       icon: BarChart3,
-      title: 'Equity Strategies',
-      description: 'Long/short equity positions across global markets with sector-neutral approaches.',
-      features: ['Global market access', 'Sector diversification', 'Risk-adjusted returns']
+      title: 'Long/Short Equity',
+      description: 'Systematic long/short equity strategies across developed and emerging markets.',
+      features: ['Market neutral approach', 'Sector diversification', 'Alpha generation']
     },
     {
       icon: PieChart,
-      title: 'Fixed Income',
-      description: 'Government and corporate bond strategies with duration and credit risk management.',
-      features: ['Yield optimization', 'Credit analysis', 'Duration hedging']
+      title: 'Global Macro',
+      description: 'Directional strategies based on macroeconomic trends and policy shifts.',
+      features: ['Currency strategies', 'Interest rate trades', 'Commodity exposure']
     },
     {
       icon: Briefcase,
-      title: 'Alternative Investments',
-      description: 'Private equity, real estate, and commodity investments for portfolio diversification.',
-      features: ['Private markets', 'Real estate', 'Commodities']
+      title: 'Event Driven',
+      description: 'Merger arbitrage, distressed securities, and special situations investing.',
+      features: ['M&A arbitrage', 'Distressed debt', 'Special situations']
     },
     {
       icon: Shield,
       title: 'Risk Management',
-      description: 'Comprehensive risk assessment and hedging strategies to protect capital.',
-      features: ['VaR modeling', 'Stress testing', 'Hedge strategies']
+      description: 'Institutional-grade risk controls and portfolio hedging strategies.',
+      features: ['VaR monitoring', 'Stress testing', 'Dynamic hedging']
     }
   ]
 
@@ -36,8 +36,8 @@ export function Services() {
             Investment Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive investment solutions tailored for institutional investors 
-            and high-net-worth individuals seeking sophisticated market exposure.
+            Multi-strategy hedge fund approach designed for Limited Partners seeking 
+            consistent absolute returns with controlled downside risk across market cycles.
           </p>
         </div>
 

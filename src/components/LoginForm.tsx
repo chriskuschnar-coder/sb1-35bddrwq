@@ -46,10 +46,10 @@ export function LoginForm() {
           </div>
         </div>
         <h1 className="font-serif text-2xl font-bold text-navy-900 mb-2">
-          Investor Portal
+          Limited Partner Portal
         </h1>
         <p className="text-gray-600">
-          Access your investment dashboard and reports
+          Secure access to your investment dashboard and performance reports
         </p>
       </div>
 
@@ -108,7 +108,10 @@ export function LoginForm() {
 
       <div className="mt-6 text-center">
         <p className="text-sm text-gray-600">
-          Demo credentials: investor@demo.com / password123
+          Demo Access: investor@globalmarket.com / SecurePass2025
+        </p>
+        <p className="text-xs text-gray-500 mt-2">
+          * Limited Partners only. Contact investor relations for access.
         </p>
       </div>
     </div>

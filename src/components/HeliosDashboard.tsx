@@ -96,75 +96,75 @@ export function HeliosDashboard() {
   // Mock data for demonstration
   const mockData: DashboardData = {
     account: {
-      balance: 7850.00,
-      equity: 7850.00,
+      balance: 485000000.00,
+      equity: 485000000.00,
       margin: 0,
-      free_margin: 7850.00,
+      free_margin: 485000000.00,
       profit: 0,
-      initial_balance: 7700.00
+      initial_balance: 450000000.00
     },
     positions: [
       {
         ticket: '12345',
-        symbol: 'BTCUSD',
+        symbol: 'SPY',
         type: 'BUY',
-        volume: 0.1,
-        price_open: 43250.00,
-        price_current: 43420.00,
-        profit: 17.00,
-        profit_pct: 0.39,
+        volume: 125000,
+        price_open: 598.50,
+        price_current: 601.25,
+        profit: 343750.00,
+        profit_pct: 0.46,
         time: '14:32:15'
       },
       {
         ticket: '12346',
-        symbol: 'ETHUSD',
+        symbol: 'QQQ',
         type: 'SELL',
-        volume: 1.5,
-        price_open: 2180.00,
-        price_current: 2175.00,
-        profit: 7.50,
-        profit_pct: 0.23,
+        volume: 75000,
+        price_open: 512.80,
+        price_current: 510.15,
+        profit: 198750.00,
+        profit_pct: 0.52,
         time: '14:28:42'
       }
     ],
     metrics: {
-      win_rate: 68.5,
-      profit_factor: 1.42,
-      sharpe_ratio: 1.18,
-      max_drawdown: 3.2,
-      avg_win: 45.20,
-      avg_loss: 28.50,
-      sortino_ratio: 1.65,
-      calmar_ratio: 2.34,
-      total_trades: 127
+      win_rate: 72.3,
+      profit_factor: 1.67,
+      sharpe_ratio: 1.89,
+      max_drawdown: 4.1,
+      avg_win: 285000.00,
+      avg_loss: 145000.00,
+      sortino_ratio: 2.14,
+      calmar_ratio: 2.89,
+      total_trades: 1847
     },
     risk_metrics: {
-      var_daily: 125.50,
-      var_weekly: 280.75,
-      leverage: 2.1,
-      position_concentration: 15.8,
-      exposure_net: 1250.00
+      var_daily: 2850000.00,
+      var_weekly: 6750000.00,
+      leverage: 1.8,
+      position_concentration: 12.4,
+      exposure_net: 125000000.00
     },
     active_signals: [
       {
         time: '14:35:22',
-        symbol: 'BTCUSD',
+        symbol: 'SPY',
         type: 'BUY',
-        strategy: 'Trend Following',
-        confidence: 85
+        strategy: 'Long/Short Equity',
+        confidence: 87
       },
       {
         time: '14:33:18',
-        symbol: 'XAUUSD',
+        symbol: 'EUR/USD',
         type: 'SELL',
-        strategy: 'Mean Reversion',
-        confidence: 72
+        strategy: 'Global Macro',
+        confidence: 78
       }
     ],
     chart_data: {
       timestamps: Array.from({ length: 50 }, (_, i) => Date.now() - (50 - i) * 60000),
-      balance: Array.from({ length: 50 }, (_, i) => 7700 + Math.random() * 200 - 100),
-      equity: Array.from({ length: 50 }, (_, i) => 7700 + Math.random() * 200 - 100)
+      balance: Array.from({ length: 50 }, (_, i) => 450000000 + Math.random() * 50000000 - 25000000),
+      equity: Array.from({ length: 50 }, (_, i) => 450000000 + Math.random() * 50000000 - 25000000)
     }
   }
 
@@ -237,8 +237,8 @@ export function HeliosDashboard() {
 
   const dailyPnl = data.account.balance - data.account.initial_balance
   const dailyPnlPct = (dailyPnl / data.account.initial_balance) * 100
-  const totalGrowth = data.account.balance - 8000 // Initial investment
-  const growthPct = (totalGrowth / 8000) * 100
+  const totalGrowth = data.account.balance - data.account.initial_balance
+  const growthPct = (totalGrowth / data.account.initial_balance) * 100
 
   // Chart configuration
   const chartOptions = {
@@ -340,8 +340,8 @@ export function HeliosDashboard() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-xl font-bold text-white tracking-tight">HELIOS CAPITAL</h1>
-              <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Quantitative Trading System</p>
+              <h1 className="text-xl font-bold text-white tracking-tight">GLOBAL MARKET CONSULTING</h1>
+              <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Live Trading Operations</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
@@ -358,19 +358,24 @@ export function HeliosDashboard() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center space-x-8 text-sm">
             <div className="flex items-center space-x-2">
-              <span className="text-gray-400">BTC/USD</span>
-              <span className="text-white font-medium">$43,420.00</span>
+              <span className="text-gray-400">SPY</span>
+              <span className="text-white font-medium">$601.25</span>
               <span className="text-green-400">+1.2%</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-gray-400">ETH/USD</span>
-              <span className="text-white font-medium">$2,175.00</span>
+              <span className="text-gray-400">QQQ</span>
+              <span className="text-white font-medium">$510.15</span>
               <span className="text-red-400">-0.8%</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-gray-400">S&P 500</span>
-              <span className="text-white font-medium">5,970.50</span>
+              <span className="text-gray-400">EUR/USD</span>
+              <span className="text-white font-medium">1.0485</span>
               <span className="text-green-400">+0.3%</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-gray-400">VIX</span>
+              <span className="text-white font-medium">14.25</span>
+              <span className="text-red-400">-2.1%</span>
             </div>
           </div>
         </div>
@@ -381,13 +386,13 @@ export function HeliosDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-400 uppercase tracking-wider">Balance</span>
+              <span className="text-xs text-gray-400 uppercase tracking-wider">Fund AUM</span>
               <DollarSign className="h-4 w-4 text-blue-400" />
             </div>
             <div className="text-2xl font-bold text-white mb-1">
-              ${data.account.balance.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              ${(data.account.balance / 1000000).toFixed(0)}M
             </div>
-            <div className="text-xs text-gray-400">Available Capital</div>
+            <div className="text-xs text-gray-400">Assets Under Management</div>
           </div>
 
           <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
@@ -400,7 +405,7 @@ export function HeliosDashboard() {
               )}
             </div>
             <div className={`text-2xl font-bold mb-1 ${dailyPnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-              {dailyPnl >= 0 ? '+' : ''}${Math.abs(dailyPnl).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {dailyPnl >= 0 ? '+' : ''}${(Math.abs(dailyPnl) / 1000000).toFixed(1)}M
             </div>
             <div className={`text-xs ${dailyPnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
               {dailyPnl >= 0 ? '+' : ''}{dailyPnlPct.toFixed(2)}%
@@ -409,11 +414,11 @@ export function HeliosDashboard() {
 
           <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-400 uppercase tracking-wider">Open P&L</span>
+              <span className="text-xs text-gray-400 uppercase tracking-wider">Unrealized P&L</span>
               <Activity className="h-4 w-4 text-yellow-400" />
             </div>
             <div className={`text-2xl font-bold mb-1 ${data.account.profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-              {data.account.profit >= 0 ? '+' : ''}${Math.abs(data.account.profit).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {data.account.profit >= 0 ? '+' : ''}${(Math.abs(data.account.profit) / 1000).toFixed(0)}K
             </div>
             <div className="text-xs text-gray-400">
               {data.positions.length} position{data.positions.length !== 1 ? 's' : ''}
@@ -422,14 +427,14 @@ export function HeliosDashboard() {
 
           <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs text-gray-400 uppercase tracking-wider">Total Return</span>
+              <span className="text-xs text-gray-400 uppercase tracking-wider">YTD Return</span>
               <TrendingUp className="h-4 w-4 text-purple-400" />
             </div>
             <div className={`text-2xl font-bold mb-1 ${totalGrowth >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-              {totalGrowth >= 0 ? '+' : ''}${Math.abs(totalGrowth).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {totalGrowth >= 0 ? '+' : ''}{growthPct.toFixed(1)}%
             </div>
-            <div className={`text-xs ${totalGrowth >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-              {totalGrowth >= 0 ? '+' : ''}{growthPct.toFixed(2)}%
+            <div className="text-xs text-gray-400">
+              Net of fees
             </div>
           </div>
         </div>

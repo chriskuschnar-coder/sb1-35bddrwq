@@ -32,9 +32,9 @@ export function About() {
             About Global Market Consulting
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Founded in 2008, we are a premier institutional investment management firm 
-            dedicated to delivering exceptional risk-adjusted returns through disciplined 
-            global market strategies.
+            Structured as a Delaware Limited Partnership with Global Market Consulting LLC 
+            as General Partner and Investment Manager. We deliver consistent, risk-adjusted 
+            returns through disciplined global market strategies since 2008.
           </p>
         </div>
 
@@ -58,37 +58,37 @@ export function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="font-serif text-2xl lg:text-3xl font-bold text-navy-900 mb-6">
-                Our Investment Philosophy
+                Investment Philosophy & Structure
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  We believe that superior investment returns are achieved through rigorous 
-                  fundamental analysis, disciplined risk management, and a long-term perspective 
-                  that transcends market cycles.
+                  As a Delaware Limited Partnership, we combine institutional-grade infrastructure 
+                  with fiduciary oversight to deliver superior risk-adjusted returns. Our approach 
+                  emphasizes transparency, disciplined risk management, and global market expertise.
                 </p>
                 <p>
-                  Our approach combines quantitative models with qualitative insights, 
-                  enabling us to identify asymmetric risk-reward opportunities across 
-                  global markets while maintaining strict downside protection.
+                  Limited Partners benefit from our rigorous investment process that combines 
+                  quantitative models with fundamental analysis, enabling us to identify 
+                  asymmetric opportunities while maintaining strict downside protection.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="font-serif text-3xl font-bold text-navy-900 mb-2">15+</div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="font-serif text-3xl font-bold text-navy-900 mb-2">17</div>
+                <div className="text-gray-600">Years Operating</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="font-serif text-3xl font-bold text-gold-600 mb-2">AAA</div>
-                <div className="text-gray-600">Credit Rating</div>
+                <div className="font-serif text-3xl font-bold text-gold-600 mb-2">LP</div>
+                <div className="text-gray-600">Structure</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="font-serif text-3xl font-bold text-navy-900 mb-2">50+</div>
-                <div className="text-gray-600">Countries</div>
+                <div className="font-serif text-3xl font-bold text-navy-900 mb-2">35+</div>
+                <div className="text-gray-600">Global Markets</div>
               </div>
               <div className="bg-white rounded-lg p-6 text-center">
-                <div className="font-serif text-3xl font-bold text-gold-600 mb-2">24/7</div>
-                <div className="text-gray-600">Global Trading</div>
+                <div className="font-serif text-3xl font-bold text-gold-600 mb-2">SEC</div>
+                <div className="text-gray-600">Registered</div>
               </div>
             </div>
           </div>
