@@ -6,7 +6,7 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'Fund Structure', href: '#about' },
+    { name: 'About Us', href: '#about' },
     { name: 'Investment Approach', href: '#services' },
     { name: 'Performance', href: '#performance' },
     { name: 'Investor Relations', href: '#contact' },

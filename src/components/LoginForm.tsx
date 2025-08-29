@@ -41,7 +41,7 @@ export function LoginForm() {
     <div className="card">
       <div className="text-center mb-8">
         <div className="flex justify-center mb-4">
-          <div className="w-16 h-16 bg-navy-600 rounded-full flex items-center justify-center">
+          <div className="w-20 h-20 bg-gradient-to-br from-navy-600 to-navy-700 rounded-full flex items-center justify-center shadow-lg">
             <TrendingUp className="h-8 w-8 text-white" />
           </div>
         </div>
@@ -49,12 +49,12 @@ export function LoginForm() {
           Limited Partner Portal
         </h1>
         <p className="text-gray-600">
-          Secure access to your investment dashboard and performance reports
+          Secure access to your investment dashboard, performance reports, and fund documents
         </p>
       </div>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6 text-center">
           {error}
         </div>
       )}
@@ -69,7 +69,8 @@ export function LoginForm() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent transition-all duration-200"
+            placeholder="Enter your email address"
             required
           />
         </div>
@@ -84,13 +85,14 @@ export function LoginForm() {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent pr-12"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent pr-12 transition-all duration-200"
+              placeholder="Enter your password"
               required
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors duration-200"
             >
               {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
             </button>
@@ -100,18 +102,24 @@ export function LoginForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-navy-600 to-navy-700 hover:from-navy-700 hover:to-navy-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
         >
           {isLoading ? 'Signing in...' : 'Sign In'}
         </button>
       </form>
 
       <div className="mt-6 text-center">
-        <p className="text-sm text-gray-600">
-          Demo Access: investor@globalmarket.com / SecurePass2025
-        </p>
-        <p className="text-xs text-gray-500 mt-2">
-          * Limited Partners only. Contact investor relations for access.
+        <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+          <p className="text-sm font-medium text-gray-700 mb-2">Demo Access Credentials</p>
+          <p className="text-sm text-gray-600 font-mono">
+            investor@globalmarket.com
+          </p>
+          <p className="text-sm text-gray-600 font-mono">
+            SecurePass2025
+          </p>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          * Limited Partners only. Contact investor relations for account access.
         </p>
       </div>
     </div>

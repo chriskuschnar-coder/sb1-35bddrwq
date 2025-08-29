@@ -13,13 +13,14 @@ export function Footer() {
               </span>
             </div>
             <p className="text-navy-200 mb-6 max-w-md">
-              Delaware Limited Partnership delivering consistent, risk-adjusted returns 
-              for Limited Partners through disciplined global market strategies since 2008.
+              Hedge fund management firm committed to delivering consistent, risk-adjusted 
+              returns through disciplined investment strategies and advanced risk management 
+              across global markets.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-navy-200">
                 <Phone className="h-4 w-4" />
-                <span>+1 (561) 555-0147</span>
+                <span>+1 (561) 555-0100</span>
               </div>
               <div className="flex items-center space-x-2 text-navy-200">
                 <Mail className="h-4 w-4" />

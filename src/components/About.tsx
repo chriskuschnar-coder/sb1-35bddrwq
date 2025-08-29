@@ -29,12 +29,13 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
-            About Global Market Consulting
+            Delaware Limited Partnership Structure
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Structured as a Delaware Limited Partnership with Global Market Consulting LLC 
-            as General Partner and Investment Manager. We deliver consistent, risk-adjusted 
-            returns through disciplined global market strategies since 2008.
+            The fund is structured as a Delaware Limited Partnership, with Global Market 
+            Consulting LLC serving as both the General Partner and Investment Manager. 
+            Investors participate as Limited Partners, benefiting from our institutional-grade 
+            infrastructure, transparency, and fiduciary oversight.
           </p>
         </div>
 

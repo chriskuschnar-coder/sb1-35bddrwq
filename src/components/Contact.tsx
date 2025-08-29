@@ -37,7 +37,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
             <h3 className="font-serif text-2xl font-bold text-navy-900 mb-6">
-              Investor Relations Office
+              Contact Information
             </h3>
             <div className="space-y-6 mb-8">
               <div className="flex items-start space-x-4">
@@ -46,7 +46,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-medium text-navy-900">Phone</div>
-                  <div className="text-gray-600">+1 (561) 555-0147</div>
+                  <div className="text-gray-600">+1 (561) 555-0100</div>
                   <div className="text-sm text-gray-500">Monday - Friday, 9:00 AM - 5:00 PM EST</div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export function Contact() {
                 <div>
                   <div className="font-medium text-navy-900">Email</div>
                   <div className="text-gray-600">investors@globalmarketconsulting.com</div>
-                  <div className="text-sm text-gray-500">Accredited investor inquiries only</div>
+                  <div className="text-sm text-gray-500">Dedicated investor relations email</div>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -65,7 +65,7 @@ export function Contact() {
                   <MapPin className="h-6 w-6 text-navy-600" />
                 </div>
                 <div>
-                  <div className="font-medium text-navy-900">Office</div>
+                  <div className="font-medium text-navy-900">Florida Office</div>
                   <div className="text-gray-600">
                     515 N Flagler Drive, Suite 1200<br />
                     West Palm Beach, FL 33401
@@ -77,7 +77,7 @@ export function Contact() {
 
           <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <h3 className="font-serif text-xl font-bold text-navy-900 mb-6">
-              Accredited Investor Inquiry
+              Secure Inquiry Form
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">

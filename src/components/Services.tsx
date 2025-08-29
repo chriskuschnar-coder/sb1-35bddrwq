@@ -33,11 +33,12 @@ export function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
-            Investment Services
+            Investment Approach
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Multi-strategy hedge fund approach designed for Limited Partners seeking 
-            consistent absolute returns with controlled downside risk across market cycles.
+            High-level description of strategy focus combining global macro, equities, and 
+            alternatives. We stress disciplined risk management, global perspective, and 
+            consistent methodology for long-term wealth creation through prudent investing.
           </p>
         </div>
 

@@ -7,21 +7,21 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="font-serif text-4xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">
-              Disciplined Global
-              <span className="text-gold-600"> Market Strategies</span>
+              Institutional Investment
+              <span className="text-gold-600"> Excellence</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Delaware Limited Partnership delivering consistent, risk-adjusted returns 
-              through disciplined investment strategies and advanced risk management 
-              across global markets since 2008.
+              Global Market Consulting is a hedge fund management firm committed to delivering 
+              consistent, risk-adjusted returns through disciplined investment strategies and 
+              advanced risk management across global markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a href="/portal" className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 inline-flex items-center justify-center">
-                Investor Login
+                Limited Partner Portal
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a href="#about" className="bg-white hover:bg-gray-50 text-navy-600 border border-navy-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200 text-center">
-                Contact Us
+                Learn More
               </a>
             </div>
             
