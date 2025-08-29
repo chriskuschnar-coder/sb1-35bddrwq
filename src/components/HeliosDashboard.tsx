@@ -340,14 +340,53 @@ export function HeliosDashboard() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-xl font-bold text-white tracking-tight">GLOBAL MARKET CONSULTING</h1>
-              <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Live Trading Operations</p>
+              <h1 className="text-2xl font-bold text-white tracking-tight">GLOBAL MARKET CONSULTING</h1>
+              <p className="text-sm text-gray-300 mt-1">Live Trading Operations Dashboard</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-xs text-gray-400">Live Data</span>
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
+                <span className="text-sm text-gray-300 font-medium">Live Market Data</span>
               </div>
+              <button 
+                onClick={() => window.close()}
+                className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+              >
+                Close Window
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Enhanced Market Ticker */}
+      <div className="bg-gray-800 border-b border-gray-700 py-3">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-8 text-sm">
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400 font-medium">SPY</span>
+                <span className="text-white font-semibold">$601.25</span>
+                <span className="text-green-400 font-medium">+1.2%</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400 font-medium">QQQ</span>
+                <span className="text-white font-semibold">$510.15</span>
+                <span className="text-red-400 font-medium">-0.8%</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400 font-medium">EUR/USD</span>
+                <span className="text-white font-semibold">1.0485</span>
+                <span className="text-green-400 font-medium">+0.3%</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400 font-medium">VIX</span>
+                <span className="text-white font-semibold">14.25</span>
+                <span className="text-red-400 font-medium">-2.1%</span>
+              </div>
+            </div>
+            <div className="text-xs text-gray-400">
+              Last updated: {new Date().toLocaleTimeString()}
             </div>
           </div>
         </div>

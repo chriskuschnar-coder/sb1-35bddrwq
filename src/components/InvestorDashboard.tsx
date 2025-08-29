@@ -51,7 +51,7 @@ export function InvestorDashboard() {
             <div className="flex items-center space-x-2">
               <TrendingUp className="h-8 w-8 text-navy-600" />
               <span className="font-serif text-xl font-bold text-navy-900">
-                Global Market Consulting LP
+                Global Market Consulting
               </span>
             </div>
             <div className="flex items-center space-x-4">
@@ -65,7 +65,7 @@ export function InvestorDashboard() {
               </div>
               <button
                 onClick={() => signOut()}
-                className="flex items-center space-x-2 text-gray-600 hover:text-navy-600 transition-colors"
+                className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-navy-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 <LogOut className="h-5 w-5" />
                 <span>Sign Out</span>
@@ -86,6 +86,7 @@ export function InvestorDashboard() {
             <div className="font-serif text-2xl font-bold text-navy-900">
               ${portfolioData.totalValue.toLocaleString()}
             </div>
+            <div className="text-xs text-gray-500 mt-1">Total capital contribution</div>
           </div>
           
           <div className="card">
@@ -96,6 +97,7 @@ export function InvestorDashboard() {
             <div className="font-serif text-2xl font-bold text-green-600">
               +{portfolioData.monthlyReturn}%
             </div>
+            <div className="text-xs text-gray-500 mt-1">Current month performance</div>
           </div>
           
           <div className="card">
