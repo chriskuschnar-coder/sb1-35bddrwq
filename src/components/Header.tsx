@@ -6,14 +6,11 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Investment Approach', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
     { name: 'Performance', href: '#performance' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Contact', href: '#contact' },
     { name: 'Investor Portal', href: '/portal' },
-    { name: 'Investment Approach', href: '#services' },
-    { name: 'Performance', href: '#performance' },
-    { name: 'Investor Relations', href: '#contact' },
   ]
 
   return (
@@ -23,7 +20,7 @@ export function Header() {
           <div className="flex items-center space-x-2">
             <TrendingUp className="h-8 w-8 text-navy-600" />
             <span className="font-serif text-xl font-bold text-navy-900">
-              Global Market Consulting
+              Helios Quantitative
             </span>
           </div>
 

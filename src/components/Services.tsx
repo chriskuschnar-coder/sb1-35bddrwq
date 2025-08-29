@@ -1,30 +1,30 @@
-import { BarChart3, Shield, Briefcase, PieChart, Brain, Zap, Target, TrendingUp } from 'lucide-react'
+import { BarChart3, Shield, Briefcase, Brain, Zap, Target, TrendingUp } from 'lucide-react'
 
 export function Services() {
   const services = [
     {
       icon: Brain,
-      title: 'Flagship Nautilus Fund',
-      description: 'Our primary institutional strategy utilizing the complete Nautilus system.',
-      features: ['$1M minimum investment', '35-45% annual target', '6-month lock-up period']
+      title: 'Helios Alpha Fund',
+      description: 'Primary quantitative strategy utilizing the complete HAMS framework.',
+      features: ['$250K minimum investment', '35-45% annual target', '6-month lock-up period']
     },
     {
       icon: Shield,
-      title: 'Conservative Income Strategy',
-      description: 'Liquidity provision and arbitrage focused on capital preservation.',
-      features: ['15-20% annual target', '3% maximum drawdown', 'Perfect for pension funds']
+      title: 'Market Neutral Strategy',
+      description: 'Statistical arbitrage and relative value focused on capital preservation.',
+      features: ['15-20% annual target', '3% maximum drawdown', 'Perfect for family offices']
     },
     {
       icon: TrendingUp,
-      title: 'Aggressive Growth Portfolio',
-      description: 'High-conviction setups with up to 3x leverage during optimal conditions.',
-      features: ['60-80% annual target', 'Higher volatility 15-20%', 'Hedge fund suitable']
+      title: 'Quantitative Momentum Portfolio',
+      description: 'High-conviction signals with up to 3x leverage during optimal conditions.',
+      features: ['60-80% annual target', '15-20% volatility', 'Sophisticated investors']
     },
     {
       icon: Zap,
       title: 'Technology Infrastructure',
-      description: 'Institutional-grade trading infrastructure with redundant systems.',
-      features: ['Sub-5ms execution', '99.97% uptime', 'Triple failover systems']
+      description: 'High-performance computing stack with institutional-grade reliability.',
+      features: ['Sub-5ms execution', '99.97% uptime', 'Colocation access']
     }
   ]
 
@@ -33,12 +33,12 @@ export function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
-            Advanced Market Microstructure Analysis
+            Advanced Quantitative Models
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our Nautilus system implements cutting-edge quantitative techniques including 
+            Our Helios system implements cutting-edge quantitative finance methodologies including 
             VPIN analysis, Kyle's Lambda modeling, and Hidden Markov regime detection. 
-            We don't use retail indicators - only institutional order flow and smart money concepts.
+            We don't use retail indicators - only pure mathematical models and statistical inference.
           </p>
         </div>
 
@@ -71,11 +71,11 @@ export function Services() {
         <div className="bg-navy-900 rounded-2xl p-8 lg:p-12 text-white">
           <div className="text-center mb-12">
             <h3 className="font-serif text-2xl lg:text-3xl font-bold mb-4">
-              Institutional Smart Money Concepts
+              Proprietary Quantitative Models
             </h3>
             <p className="text-navy-200 text-lg max-w-3xl mx-auto">
-              Complete 2025 ICT methodology implementation with order block detection, 
-              liquidity sweep analysis, and Fair Value Gap trading strategies.
+              Market maker inventory risk modeling, liquidity provision alpha, and statistical 
+              arbitrage framework using Ornstein-Uhlenbeck processes and cointegration testing.
             </p>
           </div>
           
@@ -84,22 +84,22 @@ export function Services() {
               <div className="w-16 h-16 bg-navy-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-gold-400" />
               </div>
-              <h4 className="font-serif text-lg font-bold mb-2">Order Block Detection</h4>
-              <p className="text-navy-200 text-sm">82% accuracy on institutional accumulation zone retests</p>
+              <h4 className="font-serif text-lg font-bold mb-2">VPIN Analysis</h4>
+              <p className="text-navy-200 text-sm">Real-time toxic flow identification through volume-bucketed analysis</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-navy-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="h-8 w-8 text-gold-400" />
               </div>
-              <h4 className="font-serif text-lg font-bold mb-2">Liquidity Sweep Analysis</h4>
-              <p className="text-navy-200 text-sm">Prevents retail trap participation with stop-hunt detection</p>
+              <h4 className="font-serif text-lg font-bold mb-2">Kyle's Lambda Modeling</h4>
+              <p className="text-navy-200 text-sm">Dynamic price discovery efficiency with 47% slippage reduction</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-navy-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-gold-400" />
               </div>
-              <h4 className="font-serif text-lg font-bold mb-2">Fair Value Gap Trading</h4>
-              <p className="text-navy-200 text-sm">15-20 high-probability setups daily with 1.2% average profit</p>
+              <h4 className="font-serif text-lg font-bold mb-2">Hidden Markov Models</h4>
+              <p className="text-navy-200 text-sm">Four-state regime detection with Baum-Welch parameter estimation</p>
             </div>
           </div>
         </div>

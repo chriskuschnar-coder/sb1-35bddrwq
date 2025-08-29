@@ -22,9 +22,9 @@ export function Performance() {
             Live Trading Results
           </h2>
           <p className="text-xl text-navy-200 max-w-3xl mx-auto">
-            Proven performance across 12 institutional accounts with $847M AUM. 
-            Our Nautilus system has achieved consistent profitability with zero account 
-            blow-ups in 24 months of live operation.
+            Proven performance across 4 institutional accounts with $2.7M AUM. 
+            Our Helios system has achieved consistent profitability with zero account 
+            blow-ups in 24 months of operation.
           </p>
         </div>
 
@@ -81,12 +81,12 @@ export function Performance() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-6">
               <h4 className="font-serif text-lg font-bold text-navy-900 mb-4">
-                Technology Performance Metrics
+                Quantitative Performance Metrics
               </h4>
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Data Processing Speed</span>
-                  <span className="font-semibold text-navy-900">50,000 trades/sec</span>
+                  <span className="font-semibold text-navy-900">50,000 events/sec</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Execution Latency</span>
@@ -117,7 +117,7 @@ export function Performance() {
                   <span className="font-semibold text-green-600">73%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span class="text-gray-600">Account Blow-ups</span>
+                  <span className="text-gray-600">Account Blow-ups</span>
                   <span className="font-semibold text-green-600">Zero</span>
                 </div>
                 <div className="flex justify-between">

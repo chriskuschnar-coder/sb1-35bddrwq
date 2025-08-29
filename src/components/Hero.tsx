@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, TrendingUp, Users, Zap, BarChart3 } from 'lucide-react'
+import { ArrowRight, Shield, TrendingUp, BarChart3 } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -7,14 +7,14 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="font-serif text-4xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">
-              The Nautilus
-              <span className="text-gold-600"> Trading System</span>
+              The Helios
+              <span className="text-gold-600"> Algorithmic Market System</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Global Market Consulting has developed the most sophisticated institutional-grade 
-              trading system in the digital asset space. Our proprietary Nautilus Intelligent 
-              Trading System combines cutting-edge machine learning with real-time market 
-              microstructure analysis to deliver consistent alpha generation.
+              Helios Quantitative has developed the most sophisticated mathematical trading framework 
+              in the digital asset space. Our proprietary Helios Algorithmic Market System (HAMS) 
+              combines advanced stochastic calculus with real-time market microstructure analysis 
+              to systematically extract alpha through pure mathematical edge.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a href="/portal" className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 inline-flex items-center justify-center">
@@ -31,7 +31,7 @@ export function Hero() {
                 <div className="flex justify-center mb-2">
                   <Shield className="h-8 w-8 text-navy-600" />
                 </div>
-                <div className="font-serif text-2xl font-bold text-navy-900">$847M</div>
+                <div className="font-serif text-2xl font-bold text-navy-900">$2.7M</div>
                 <div className="text-sm text-gray-600">Assets Under Management</div>
               </div>
               <div className="text-center">
@@ -55,7 +55,7 @@ export function Hero() {
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif text-xl font-bold text-navy-900">Nautilus Performance</h3>
+                  <h3 className="font-serif text-xl font-bold text-navy-900">Helios Performance</h3>
                   <span className="text-green-600 font-semibold">+287% Annual</span>
                 </div>
                 <div className="space-y-4">
@@ -89,8 +89,8 @@ export function Hero() {
                 </div>
                 <div className="pt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Zap className="h-4 w-4 text-gold-600" />
-                    <span>$12M+ Technology Investment</span>
+                    <BarChart3 className="h-4 w-4 text-gold-600" />
+                    <span>$2.8M+ Technology Investment</span>
                   </div>
                 </div>
               </div>

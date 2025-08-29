@@ -26,12 +26,12 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
-            Join the Future of Institutional Trading
+            Join the Quantitative Revolution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Global Market Consulting's Nautilus system represents the convergence of traditional 
-            quantitative finance and cutting-edge blockchain markets. Schedule a demonstration 
-            of our live trading system and meet with our quantitative team.
+            Helios Quantitative represents the intersection of academic finance theory and 
+            practical market application. Our mathematical models don't chase price action - 
+            they anticipate market dynamics through statistical inference.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-medium text-navy-900">Institutional Email</div>
-                  <div className="text-gray-600">institutional@globalmarketconsulting.com</div>
+                  <div className="text-gray-600">investors@heliosquant.com</div>
                   <div className="text-sm text-gray-500">Qualified investors only</div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="font-medium text-navy-900">Schedule Demo</div>
-                  <div className="text-gray-600">calendly.com/gmc-institutional</div>
+                  <div className="text-gray-600">calendly.com/helios-institutional</div>
                   <div className="text-sm text-gray-500">Live system demonstration</div>
                 </div>
               </div>
@@ -92,19 +92,19 @@ export function Contact() {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-gold-600 rounded-full mr-3"></div>
-                  Schedule a demonstration of our live trading system
+                  Review our quantitative research papers
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-gold-600 rounded-full mr-3"></div>
-                  Review detailed backtesting spanning 5 years
+                  Access detailed backtest results (5-year history)
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-gold-600 rounded-full mr-3"></div>
-                  Access sample monthly performance reports
+                  Schedule discussion with our quantitative team
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-gold-600 rounded-full mr-3"></div>
-                  Meet with our quantitative development team
+                  Examine live trading system demonstration
                 </li>
               </ul>
             </div>
@@ -182,7 +182,7 @@ export function Contact() {
               </button>
             </form>
             <div className="mt-4 text-xs text-gray-500 text-center">
-              * Qualified institutional and accredited investors only. Minimum investment $1M.
+              * Qualified institutional and accredited investors only. Minimum investment $250K.
             </div>
           </div>
         </div>

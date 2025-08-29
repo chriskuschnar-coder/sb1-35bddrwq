@@ -16,7 +16,7 @@ export function LoginForm() {
     setError('')
 
     // Simple demo authentication
-    if (email === 'investor@nautilus.com' && password === 'NautilusDemo2025') {
+    if (email === 'investor@heliosquant.com' && password === 'HeliosDemo2025') {
       // Simulate loading
       setTimeout(() => {
         window.location.href = '/portal/dashboard'
@@ -38,10 +38,10 @@ export function LoginForm() {
               </div>
             </div>
             <h1 className="font-serif text-2xl font-bold text-navy-900 mb-2">
-              Nautilus Investor Portal
+              Helios Investor Portal
             </h1>
             <p className="text-gray-600">
-              Secure access to your institutional investment dashboard and live trading system performance
+              Secure access to your quantitative investment dashboard and live trading system performance
             </p>
           </div>
 
@@ -108,10 +108,10 @@ export function LoginForm() {
               </div>
               <div className="space-y-2">
                 <p className="text-sm text-navy-700 font-mono bg-white px-3 py-2 rounded border">
-                  investor@nautilus.com
+                  investor@heliosquant.com
                 </p>
                 <p className="text-sm text-navy-700 font-mono bg-white px-3 py-2 rounded border">
-                  NautilusDemo2025
+                  HeliosDemo2025
                 </p>
               </div>
               <p className="text-xs text-gray-600 mt-3">
