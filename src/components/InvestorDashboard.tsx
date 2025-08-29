@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { signOut, useSession } from 'next-auth/react'
 import { 
   TrendingUp, 
   LogOut, 
@@ -10,61 +9,61 @@ import {
   FileText, 
   DollarSign,
   ArrowUpRight,
-  ArrowDownRight
+  Shield,
+  Zap
 } from 'lucide-react'
 
 export function InvestorDashboard() {
-  const { data: session } = useSession()
   const [selectedTab, setSelectedTab] = useState('overview')
 
   const portfolioData = {
-    totalValue: 3250000,
-    monthlyReturn: 1.8,
-    yearlyReturn: 11.8,
-    totalReturn: 67.4
+    totalValue: 12500000,
+    monthlyReturn: 18.7,
+    yearlyReturn: 287,
+    sharpeRatio: 2.84
   }
 
   const holdings = [
-    { name: 'Long/Short Equity Strategy', allocation: 65, value: 2112500, return: 13.7 },
-    { name: 'Global Macro Strategy', allocation: 25, value: 812500, return: 9.2 },
-    { name: 'Event Driven Strategy', allocation: 10, value: 325000, return: 15.8 }
+    { name: 'Nautilus Flagship Fund', allocation: 70, value: 8750000, return: 18.7 },
+    { name: 'Conservative Income Strategy', allocation: 20, value: 2500000, return: 15.2 },
+    { name: 'Aggressive Growth Portfolio', allocation: 10, value: 1250000, return: 62.4 }
   ]
 
   const recentTransactions = [
-    { date: '2025-01-15', type: 'Performance Fee', amount: -18750, fund: 'Long/Short Equity Strategy' },
-    { date: '2025-01-10', type: 'Capital Call', amount: 250000, fund: 'Global Macro Strategy' },
-    { date: '2025-01-05', type: 'Distribution', amount: 45000, fund: 'Event Driven Strategy' }
+    { date: '2025-01-15', type: 'Performance Distribution', amount: 234000, fund: 'Nautilus Flagship Fund' },
+    { date: '2025-01-10', type: 'Capital Contribution', amount: 2500000, fund: 'Conservative Income Strategy' },
+    { date: '2025-01-05', type: 'Monthly Performance', amount: 187500, fund: 'Aggressive Growth Portfolio' }
   ]
 
   const tabs = [
-    { id: 'overview', name: 'Overview', icon: BarChart3 },
-    { id: 'holdings', name: 'Holdings', icon: PieChart },
-    { id: 'documents', name: 'Documents', icon: FileText }
+    { id: 'overview', name: 'Portfolio Overview', icon: BarChart3 },
+    { id: 'holdings', name: 'Fund Holdings', icon: PieChart },
+    { id: 'documents', name: 'Reports & Documents', icon: FileText }
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
-        <div className="container-max section-padding">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <TrendingUp className="h-8 w-8 text-navy-600" />
               <span className="font-serif text-xl font-bold text-navy-900">
-                Global Market Consulting
+                Nautilus Investor Portal
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="text-right">
                 <div className="text-sm font-medium text-gray-900">
-                  {session?.user?.name || 'Limited Partner'}
+                  Institutional Investor
                 </div>
                 <div className="text-xs text-gray-600">
-                  {session?.user?.email}
+                  investor@nautilus.com
                 </div>
               </div>
               <button
-                onClick={() => signOut()}
+                onClick={() => window.location.href = '/'}
                 className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-navy-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 <LogOut className="h-5 w-5" />
@@ -75,21 +74,21 @@ export function InvestorDashboard() {
         </div>
       </header>
 
-      <div className="container-max section-padding py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Portfolio Summary */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-600">LP Investment Value</span>
+              <span className="text-gray-600">Total Investment Value</span>
               <DollarSign className="h-5 w-5 text-green-600" />
             </div>
             <div className="font-serif text-2xl font-bold text-navy-900">
               ${portfolioData.totalValue.toLocaleString()}
             </div>
-            <div className="text-xs text-gray-500 mt-1">Total capital contribution</div>
+            <div className="text-xs text-gray-500 mt-1">Across all Nautilus strategies</div>
           </div>
           
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-gray-600">Monthly Return</span>
               <ArrowUpRight className="h-5 w-5 text-green-600" />
@@ -97,27 +96,29 @@ export function InvestorDashboard() {
             <div className="font-serif text-2xl font-bold text-green-600">
               +{portfolioData.monthlyReturn}%
             </div>
-            <div className="text-xs text-gray-500 mt-1">Current month performance</div>
+            <div className="text-xs text-gray-500 mt-1">Average monthly performance</div>
           </div>
           
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-600">Net Annual Return</span>
+              <span className="text-gray-600">Annual Return</span>
               <ArrowUpRight className="h-5 w-5 text-green-600" />
             </div>
             <div className="font-serif text-2xl font-bold text-green-600">
               +{portfolioData.yearlyReturn}%
             </div>
+            <div className="text-xs text-gray-500 mt-1">Since inception</div>
           </div>
           
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-600">Cumulative Return</span>
-              <ArrowUpRight className="h-5 w-5 text-green-600" />
+              <span className="text-gray-600">Sharpe Ratio</span>
+              <Shield className="h-5 w-5 text-gold-600" />
             </div>
-            <div className="font-serif text-2xl font-bold text-green-600">
-              +{portfolioData.totalReturn}%
+            <div className="font-serif text-2xl font-bold text-gold-600">
+              {portfolioData.sharpeRatio}
             </div>
+            <div className="text-xs text-gray-500 mt-1">Risk-adjusted returns</div>
           </div>
         </div>
 
@@ -146,12 +147,12 @@ export function InvestorDashboard() {
             {selectedTab === 'overview' && (
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif text-xl font-bold text-navy-900">Limited Partnership Overview</h3>
+                  <h3 className="font-serif text-xl font-bold text-navy-900">Nautilus System Performance</h3>
                   <button 
                     onClick={() => window.open('/helios', '_blank')}
                     className="bg-navy-600 hover:bg-navy-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 inline-flex items-center"
                   >
-                    <BarChart3 className="h-4 w-4 mr-2" />
+                    <Zap className="h-4 w-4 mr-2" />
                     Live Trading Dashboard
                   </button>
                 </div>
@@ -177,7 +178,7 @@ export function InvestorDashboard() {
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-4">Recent LP Activity</h4>
+                    <h4 className="font-medium text-gray-900 mb-4">Recent Activity</h4>
                     <div className="space-y-3">
                       {recentTransactions.map((transaction, index) => (
                         <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
@@ -186,8 +187,8 @@ export function InvestorDashboard() {
                             <div className="text-sm text-gray-600">{transaction.fund}</div>
                           </div>
                           <div className="text-right">
-                            <div className={`font-medium ${transaction.amount > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                              {transaction.amount > 0 ? '+' : ''}${Math.abs(transaction.amount).toLocaleString()}
+                            <div className="font-medium text-green-600">
+                              +${transaction.amount.toLocaleString()}
                             </div>
                             <div className="text-sm text-gray-600">{transaction.date}</div>
                           </div>
@@ -201,7 +202,7 @@ export function InvestorDashboard() {
 
             {selectedTab === 'holdings' && (
               <div className="space-y-6">
-                <h3 className="font-serif text-xl font-bold text-navy-900">Strategy Breakdown</h3>
+                <h3 className="font-serif text-xl font-bold text-navy-900">Fund Strategy Breakdown</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -209,7 +210,7 @@ export function InvestorDashboard() {
                         <th className="text-left py-3 font-medium text-gray-900">Strategy</th>
                         <th className="text-right py-3 font-medium text-gray-900">Allocation</th>
                         <th className="text-right py-3 font-medium text-gray-900">Market Value</th>
-                        <th className="text-right py-3 font-medium text-gray-900">Net Return</th>
+                        <th className="text-right py-3 font-medium text-gray-900">Performance</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -233,17 +234,17 @@ export function InvestorDashboard() {
 
             {selectedTab === 'documents' && (
               <div className="space-y-6">
-                <h3 className="font-serif text-xl font-bold text-navy-900">Limited Partner Documents</h3>
+                <h3 className="font-serif text-xl font-bold text-navy-900">Investor Documents & Reports</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    'Monthly LP Report - January 2025',
-                    'Quarterly Investment Letter - Q4 2024', 
-                    'Annual K-1 Tax Statement - 2024',
-                    'Limited Partnership Agreement',
-                    'Risk Disclosure Statement',
-                    'SEC Form ADV - Part 2A',
-                    'Audited Financial Statements - 2024',
-                    'Compliance & Regulatory Filings'
+                    'Monthly Performance Report - January 2025',
+                    'Nautilus System Technology Overview', 
+                    'Quarterly Investment Letter - Q4 2024',
+                    'Risk Management Framework',
+                    'Market Microstructure Analysis',
+                    'Smart Money Concepts Implementation',
+                    'Compliance & Regulatory Filings',
+                    'Institutional Sales Presentation'
                   ].map((doc, index) => (
                     <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="flex items-center space-x-3">

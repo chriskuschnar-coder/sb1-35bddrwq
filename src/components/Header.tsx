@@ -10,6 +10,7 @@ export function Header() {
     { name: 'Investment Approach', href: '#services' },
     { name: 'Performance', href: '#performance' },
     { name: 'About Us', href: '#about' },
+    { name: 'Investor Portal', href: '/portal' },
     { name: 'Investment Approach', href: '#services' },
     { name: 'Performance', href: '#performance' },
     { name: 'Investor Relations', href: '#contact' },
@@ -32,14 +33,15 @@ export function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-navy-600 font-medium transition-colors duration-200"
+                className={`font-medium transition-colors duration-200 ${
+                  item.name === 'Investor Portal' 
+                    ? 'bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg' 
+                    : 'text-gray-700 hover:text-navy-600'
+                }`}
               >
                 {item.name}
               </a>
             ))}
-            <a href="/portal" className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-              Limited Partner Login
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -61,15 +63,16 @@ export function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-navy-600 font-medium"
+                  className={`block px-3 py-2 font-medium ${
+                    item.name === 'Investor Portal'
+                      ? 'text-navy-600 bg-navy-50 rounded-lg'
+                      : 'text-gray-700 hover:text-navy-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a href="/portal" className="block px-3 py-2 text-navy-600 font-medium">
-                Limited Partner Login
-              </a>
             </div>
           </div>
         )}

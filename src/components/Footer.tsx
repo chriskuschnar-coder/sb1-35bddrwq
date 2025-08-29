@@ -1,4 +1,4 @@
-import { TrendingUp, Mail, Phone, MapPin } from 'lucide-react'
+import { TrendingUp, Mail, Phone, MapPin, Calendar } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -13,43 +13,47 @@ export function Footer() {
               </span>
             </div>
             <p className="text-navy-200 mb-6 max-w-md">
-              Hedge fund management firm committed to delivering consistent, risk-adjusted 
-              returns through disciplined investment strategies and advanced risk management 
-              across global markets.
+              Institutional-grade algorithmic trading powered by the Nautilus Intelligent 
+              Trading System. Delivering consistent alpha generation through advanced market 
+              microstructure analysis and smart money concepts.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-navy-200">
                 <Phone className="h-4 w-4" />
-                <span>+1 (561) 555-0100</span>
+                <span>+1 (212) 555-0150</span>
               </div>
               <div className="flex items-center space-x-2 text-navy-200">
                 <Mail className="h-4 w-4" />
-                <span>investors@globalmarketconsulting.com</span>
+                <span>institutional@globalmarketconsulting.com</span>
               </div>
               <div className="flex items-center space-x-2 text-navy-200">
                 <MapPin className="h-4 w-4" />
-                <span>515 N Flagler Drive, West Palm Beach, FL 33401</span>
+                <span>200 West Street, Suite 2100, New York, NY 10282</span>
+              </div>
+              <div className="flex items-center space-x-2 text-navy-200">
+                <Calendar className="h-4 w-4" />
+                <span>calendly.com/gmc-institutional</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4">Services</h3>
+            <h3 className="font-serif text-lg font-bold mb-4">Technology</h3>
             <ul className="space-y-2 text-navy-200">
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Long/Short Equity</a></li>
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Global Macro</a></li>
-              <li><a href="#services" className="hover:text-gold-400 transition-colors">Event Driven</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Nautilus System</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Smart Money Concepts</a></li>
+              <li><a href="#services" className="hover:text-gold-400 transition-colors">Order Flow Analysis</a></li>
               <li><a href="#services" className="hover:text-gold-400 transition-colors">Risk Management</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4">Limited Partners</h3>
+            <h3 className="font-serif text-lg font-bold mb-4">Investors</h3>
             <ul className="space-y-2 text-navy-200">
               <li><a href="/portal" className="hover:text-gold-400 transition-colors">Investor Portal</a></li>
-              <li><a href="#performance" className="hover:text-gold-400 transition-colors">Performance</a></li>
-              <li><a href="#about" className="hover:text-gold-400 transition-colors">Fund Structure</a></li>
-              <li><a href="#contact" className="hover:text-gold-400 transition-colors">Investor Relations</a></li>
+              <li><a href="#performance" className="hover:text-gold-400 transition-colors">Live Results</a></li>
+              <li><a href="#about" className="hover:text-gold-400 transition-colors">Technology Overview</a></li>
+              <li><a href="#contact" className="hover:text-gold-400 transition-colors">Schedule Demo</a></li>
             </ul>
           </div>
         </div>
@@ -60,11 +64,18 @@ export function Footer() {
               © 2025 Global Market Consulting. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-navy-300">
-              <a href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gold-400 transition-colors">LP Agreement</a>
               <a href="#" className="hover:text-gold-400 transition-colors">Risk Disclosures</a>
-              <a href="#" className="hover:text-gold-400 transition-colors">SEC Filings</a>
+              <a href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-gold-400 transition-colors">SEC Compliance</a>
+              <a href="#" className="hover:text-gold-400 transition-colors">Terms of Service</a>
             </div>
+          </div>
+          <div className="mt-6 text-xs text-navy-400 text-center">
+            <p>
+              <strong>Performance Disclaimer:</strong> Past performance is not indicative of future results. 
+              Digital asset investments carry substantial risk including complete loss of capital. 
+              Returns shown are net of all fees. Only suitable for qualified institutional and accredited investors.
+            </p>
           </div>
         </div>
       </div>
