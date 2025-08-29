@@ -390,34 +390,6 @@ export function HeliosDashboard() {
             </div>
           </div>
         </div>
-      </header>
-
-      {/* Market Ticker */}
-      <div className="bg-gray-800 border-b border-gray-700 py-2">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center space-x-8 text-sm">
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-400">SPY</span>
-              <span className="text-white font-medium">$601.25</span>
-              <span className="text-green-400">+1.2%</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-400">QQQ</span>
-              <span className="text-white font-medium">$510.15</span>
-              <span className="text-red-400">-0.8%</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-400">EUR/USD</span>
-              <span className="text-white font-medium">1.0485</span>
-              <span className="text-green-400">+0.3%</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-400">VIX</span>
-              <span className="text-white font-medium">14.25</span>
-              <span className="text-red-400">-2.1%</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-6">
