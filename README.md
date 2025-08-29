@@ -1,32 +1,30 @@
 # Global Market Consulting - Hedge Fund Website
 
-A professional, full-stack Next.js website for Global Market Consulting, featuring both a public corporate website and a secure investor portal.
+A professional hedge fund website built with Vite + React + TypeScript, featuring institutional-grade design and investor portal access.
 
 ## Features
 
 ### Public Website
 - **Home Page**: Hero section with mission statement and investment philosophy highlights
-- **About Us**: Firm overview, corporate structure, and leadership team bios
+- **About Us**: Firm overview, Delaware Limited Partnership structure, and institutional credibility
 - **Investment Approach**: Detailed investment strategies and risk management
+- **Performance**: Fund performance metrics and risk-adjusted returns
 - **Investor Relations**: Limited Partnership information and accredited investor inquiry form
-- **Compliance & Disclosures**: Legal disclaimers, risk disclosures, and privacy policy
 - **Contact**: Secure contact forms and office information
 
 ### Investor Portal
-- **Secure Authentication**: NextAuth.js with credential-based login
-- **Protected Dashboard**: Account summaries, performance metrics, and document access
-- **Role-based Access**: Different access levels for investors and administrators
-- **Document Management**: PDF reports, compliance documents, and investor letters
+- **Secure Login**: Demo credentials for investor access
+- **Investment Dashboard**: Account summaries, performance metrics, and strategy allocation
+- **Live Trading Dashboard**: Real-time trading operations view (Helios system)
+- **Document Access**: Performance reports and compliance documents
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Vite + React 18
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS with custom design system
-- **Database**: Prisma with SQLite (easily configurable for PostgreSQL)
-- **Authentication**: NextAuth.js
-- **UI Components**: Custom components with Headless UI
 - **Icons**: Lucide React
+- **Charts**: Chart.js for performance visualization
 
 ## Getting Started
 
@@ -35,42 +33,20 @@ A professional, full-stack Next.js website for Global Market Consulting, featuri
    npm install
    ```
 
-2. **Set up Environment Variables**
-   Copy `.env.local` and update with your values:
-   ```bash
-   # Database
-   DATABASE_URL="file:./dev.db"
-   
-   # NextAuth.js
-   NEXTAUTH_SECRET="your-secret-key-here"
-   NEXTAUTH_URL="http://localhost:3000"
-   
-   # Stripe (optional)
-   STRIPE_SECRET_KEY="sk_test_..."
-   STRIPE_PUBLISHABLE_KEY="pk_test_..."
-   ```
-
-3. **Initialize Database**
-   ```bash
-   npm run db:generate
-   npm run db:push
-   ```
-
-4. **Run Development Server**
+2. **Run Development Server**
    ```bash
    npm run dev
    ```
 
-5. **Access the Application**
-   - Public website: http://localhost:3000
-   - Investor portal: http://localhost:3000/portal (requires authentication)
+3. **Access the Application**
+   - Public website: http://localhost:5173
+   - Investor portal: Click "Limited Partner Portal" or "Limited Partner Login"
 
-## Database Schema
+## Demo Access
 
-The application includes a comprehensive database schema with:
-- **User Management**: Users, accounts, sessions with role-based access
-- **Investment Tracking**: Investment records with performance metrics
-- **Authentication**: NextAuth.js integration with Prisma adapter
+Use these credentials to access the investor portal:
+- **Email**: investor@globalmarket.com
+- **Password**: SecurePass2025
 
 ## Design System
 
@@ -83,46 +59,51 @@ The application includes a comprehensive database schema with:
 - **Headings**: Georgia serif for institutional feel
 - **Body**: Inter sans-serif for readability
 
-## Security Features
+## Project Structure
 
-- **Protected Routes**: All portal routes require authentication
-- **Role-based Access**: Different permissions for investors vs. administrators
-- **Secure Forms**: CSRF protection and input validation
-- **Data Encryption**: Passwords hashed with bcrypt
-
-## Deployment
-
-The application is ready to deploy to:
-- **Vercel**: Optimized for Next.js deployment
-- **Netlify**: Static site generation support
-- **Railway/Render**: Full-stack deployment with database
-
-### Environment Setup for Production
-1. Set up a PostgreSQL database
-2. Update `DATABASE_URL` in environment variables
-3. Set secure `NEXTAUTH_SECRET`
-4. Configure Stripe keys if using payment features
-
-## Custom Dashboard Integration
-
-The investor dashboard is currently using placeholder data. To integrate your custom dashboard:
-
-1. Replace the placeholder data fetching in `InvestorDashboard.tsx`
-2. Update the API routes to connect with your data sources
-3. Modify the dashboard components to match your specific requirements
+```
+src/
+├── components/          # React components
+│   ├── Hero.tsx        # Landing page hero section
+│   ├── About.tsx       # About us section
+│   ├── Services.tsx    # Investment approach
+│   ├── Performance.tsx # Fund performance metrics
+│   ├── Contact.tsx     # Contact and investor relations
+│   ├── Header.tsx      # Navigation header
+│   ├── Footer.tsx      # Site footer
+│   ├── LoginForm.tsx   # Investor login form
+│   ├── InvestorDashboard.tsx    # LP dashboard
+│   ├── HeliosDashboard.tsx      # Live trading dashboard
+│   └── DashboardSelector.tsx    # Dashboard switcher
+├── App.tsx             # Main application component
+└── main.tsx           # Application entry point
+```
 
 ## Development Commands
 
 ```bash
 npm run dev          # Start development server
 npm run build        # Build for production
-npm run start        # Start production server
+npm run preview      # Preview production build
 npm run lint         # Run ESLint
-npm run db:generate  # Generate Prisma client
-npm run db:push      # Push schema to database
-npm run db:studio    # Open Prisma Studio
 ```
+
+## Deployment
+
+The application is ready to deploy to:
+- **Vercel**: Optimized for React deployment
+- **Netlify**: Static site generation support
+- **Any static hosting provider**
+
+## Features
+
+- **Responsive Design**: Mobile-first approach with breakpoints
+- **Professional Styling**: Institutional-grade visual design
+- **Interactive Elements**: Hover states and smooth transitions
+- **Performance Metrics**: Real-time fund performance tracking
+- **Secure Access**: Role-based investor portal access
+- **Live Trading View**: Professional trading dashboard interface
 
 ## Support
 
-For questions about implementation or customization, refer to the documentation or contact the development team.
+This is a demonstration hedge fund website showcasing institutional-grade web development for financial services.
