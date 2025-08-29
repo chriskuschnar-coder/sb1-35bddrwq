@@ -9,6 +9,9 @@ export function Header() {
     { name: 'About Us', href: '#about' },
     { name: 'Investment Approach', href: '#services' },
     { name: 'Performance', href: '#performance' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Investment Approach', href: '#services' },
+    { name: 'Performance', href: '#performance' },
     { name: 'Investor Relations', href: '#contact' },
   ]
 
